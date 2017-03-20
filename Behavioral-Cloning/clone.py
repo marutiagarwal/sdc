@@ -8,12 +8,12 @@ import skimage.io
 from keras.optimizers import Adam, Adadelta
 
 # verious network architectures
-from model_basic import BasicNet
-from model_lenet import LeNet
-from model_nvidianet import NvidiaNet
-# from model_nvidia_lstmnet import NvidiaLSTMNet
+from model import BasicNet, LeNet, NvidiaNet
 
 def augment_brightness_camera_images(image):
+    '''
+        ref:  https://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9#.80u6mtxvu
+    '''
     image1 = cv2.cvtColor(image,cv2.COLOR_RGB2HSV)
     image1 = np.array(image1, dtype = np.float64)
     random_bright = 0.5+np.random.uniform()
@@ -24,6 +24,9 @@ def augment_brightness_camera_images(image):
     return image1
 
 def add_random_shadow(image):
+    '''
+        ref: https://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9#.80u6mtxvu
+    '''
     top_y = 320*np.random.uniform()
     top_x = 0
     bot_x = 160
@@ -117,6 +120,6 @@ learning_rate=0.001
 #opt = Adam(lr=learning_rate)
 opt = Adadelta(lr=learning_rate)
 model.compile(loss='mse', optimizer=opt) # rmsprop
-model.fit(X_train, y_train, validation_split=0.2, shuffle=True, nb_epoch=50, verbose=2)
+model.fit(X_train, y_train, validation_split=0.2, shuffle=True, nb_epoch=25, verbose=2)
 
 model.save('model.h5')
