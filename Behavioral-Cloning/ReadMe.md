@@ -1,6 +1,6 @@
 Here is a link to the video file obtained in "autonomous" model on using the trained model committed above.
 
-https://youtu.be/xrfQ1odZzJw
+[![ScreenShot](https://github.com/marutiagarwal/sdc/blob/master/Behavioral-Cloning/images/driving/2017_03_20_03_54_34_173.jpg)](https://youtu.be/xrfQ1odZzJw)
 
 
 **Training Dataset**
