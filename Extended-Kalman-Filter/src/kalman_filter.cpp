@@ -65,7 +65,8 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
   VectorXd y = z - z_pred;
 
   // update angle
-  y(1) = rectifyAngle(y(1));
+  // y(1) = rectifyAngle(y(1));
+  y(1) = normalizeAngle(y(1));
 
   MatrixXd Ht = H_.transpose();
   MatrixXd S = H_ * P_ * Ht + R_;
@@ -137,5 +138,8 @@ float KalmanFilter::rectifyAngle(const float phi) {
   return phi_modified;
 }
 
+double KalmanFilter::normalizeAngle(const double phi){
+ return  atan2(sin(phi), cos(phi)); 
+}
 
 

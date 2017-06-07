@@ -70,6 +70,7 @@ private:
   Eigen::VectorXd hx_;
 
   float rectifyAngle(const float phi);
+  double normalizeAngle(const double phi);
 
   void toPolarCoordinates();
 };
