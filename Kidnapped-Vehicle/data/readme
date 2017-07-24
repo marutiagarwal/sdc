@@ -1,0 +1,5 @@
+map_data.txt includes the position of landmarks (in meters) on an arbitrary Cartesian coordinate system. Each row has three columns
+
+x position
+y position
+landmark id
