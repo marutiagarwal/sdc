@@ -22,12 +22,12 @@ I accounts for past values of the error. For example, if the current output is n
 <table>
 	<th>Param state</th><th>Description</th>
 	<tr>
-		<td>Higher P,
-		P = 0.1</td>
+		<td>Higher I,
+		I = 0.1</td>
 		<td>Was taking sharp turns and crossed the bridge. Went off the track at the very first steep turn after the bridge and could not come back. </td>
 	</tr>
 	<tr>
-		<td>Lower P, P = 0.00001</td>
+		<td>Lower I, I = 0.00001</td>
 		<td>Quite stable drive. Completed the track. Can easily be chosen as an acceptable value.</td>
 	</tr>
 </table>
@@ -38,12 +38,12 @@ D accounts for possible future trends of the error, based on its current rate of
 <table>
 	<th>Param state</th><th>Description</th>
 	<tr>
-		<td>Higher P,
-		P = 0.1</td>
+		<td>Higher D,
+		D = 0.1</td>
 		<td>Sharp turns and flickers a lot. Made to a very little distance from the beginning. Went off track and count not return to the track.</td>
 	</tr>
 	<tr>
-		<td>Lower P, P = 100</td>
+		<td>Lower D, D = 100</td>
 		<td>Slow and stable drive. Completes the entire track. Though, speed is much slower than our best model.</td>
 	</tr>
 </table>
