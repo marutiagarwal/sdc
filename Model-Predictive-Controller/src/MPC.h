@@ -10,7 +10,7 @@ using namespace std;
 #define WEIGHT_CTE 3000
 #define WEIGHT_EPSI 3000
 #define WEIGHT_V 1
-#define WEIGHT_DELTA 10000
+#define WEIGHT_DELTA 50000
 #define WEIGHT_A 500
 #define WEIGHT_DDELTA 10
 #define WEIGHT_DA 10
