@@ -1,6 +1,13 @@
+
+Here is a link to the video file obtained in "autonomous" model on using the trained model committed above.
+
+[![ScreenShot](https://github.com/marutiagarwal/sdc/blob/master/Behavioral-Cloning/images/driving/2017_03_20_03_54_34_173.jpg)](https://youtu.be/FzeD7ChuIKg)
+
+
 # CarND-Path-Planning-Project
 Self-Driving Car Engineer Nanodegree Program
-   
+
+
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases).
 
