@@ -1,7 +1,7 @@
 
 Here is a link to the video file obtained in "autonomous" model on using the trained model committed above.
 
-[![ScreenShot](https://github.com/marutiagarwal/sdc/blob/master/Behavioral-Cloning/images/driving/2017_03_20_03_54_34_173.jpg)](https://youtu.be/FzeD7ChuIKg)
+[![ScreenShot](https://github.com/marutiagarwal/sdc/blob/term2/Path-Planning/images/lane_change.png)](https://youtu.be/FzeD7ChuIKg)
 
 
 # CarND-Path-Planning-Project
