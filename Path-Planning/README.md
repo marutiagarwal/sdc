@@ -1,5 +1,5 @@
 
-Here is a link to the video file obtained in "autonomous" model on using the trained model committed above.
+Here is a link to the video file.
 
 [![ScreenShot](https://github.com/marutiagarwal/sdc/blob/term2/Path-Planning/images/lane_change.png)](https://youtu.be/FzeD7ChuIKg)
 
