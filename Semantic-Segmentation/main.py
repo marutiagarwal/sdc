@@ -115,13 +115,18 @@ def optimize(nn_last_layer, correct_label, learning_rate, num_classes):
     # create loss function.
     cross_entropy_loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits= logits, labels= correct_label))
     
+    # manually add regularization to the cross-entrpy-loss
+    reg_losses = tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES)
+    reg_constant = 0.01  # Choose an appropriate one.
+    loss = cross_entropy_loss + reg_constant * sum(reg_losses)
+
     # Define optimizer. Adam in this case to have variable learning rate.
     optimizer = tf.train.AdamOptimizer(learning_rate= learning_rate)
     
     # Apply optimizer to the loss function.
-    train_op = optimizer.minimize(cross_entropy_loss)
+    train_op = optimizer.minimize(loss)
 
-    return logits, train_op, cross_entropy_loss
+    return logits, train_op, loss
     
 tests.test_optimize(optimize)
 
